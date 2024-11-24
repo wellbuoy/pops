@@ -4,9 +4,11 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   background-color: #fdbf00;
 }
+
 .card {
   width: 750px;
   height: 550px;
@@ -19,13 +21,21 @@ body {
   -webkit-perspective: 1200px;
   perspective: 1200px;
   transition: 1s;
+  cursor: pointer;
 }
+
+.card.flipped .outside {
+  transform: rotateY(180deg); /* Rotating the card when clicked */
+}
+
 .card:hover {
   transform: rotate(-5deg);
 }
+
 .card:hover .outside {
   transform: rotateY(-130deg);
 }
+
 .outside,
 .inside {
   height: 110%;
@@ -33,6 +43,7 @@ body {
   position: absolute;
   left: 25.1%;
 }
+
 .inside {
   background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
   line-height: 2;
@@ -44,14 +55,15 @@ body {
   align-items: center;
   left: 25%;
 }
+
 .outside {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   z-index: 1;
   transform-origin: left;
   transition: 2s;
-  cursor: pointer;
 }
+
 .front,
 .back {
   height: 100%;
@@ -61,18 +73,22 @@ body {
   backface-visibility: hidden;
   transform: rotateX(0deg);
 }
+
 .front {
   background-color: #ffffff;
 }
+
 .back {
   transform: rotateY(180deg);
   background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
 }
+
 .cake {
   width: 100%;
   position: absolute;
   bottom: 30px;
 }
+
 .top-layer,
 .middle-layer,
 .bottom-layer {
@@ -92,14 +108,17 @@ body {
   position: relative;
   margin: auto;
 }
+
 .middle-layer {
   transform: scale(0.85);
   top: 6px;
 }
+
 .top-layer {
   transform: scale(0.7);
   top: 26px;
 }
+
 .candle {
   height: 45px;
   width: 15px;
@@ -116,6 +135,7 @@ body {
   right: 0;
   bottom: 202px;
 }
+
 .candle:before {
   content: "";
   position: absolute;
@@ -127,6 +147,7 @@ body {
   transform: rotate(45deg);
   left: -1px;
 }
+
 .outside p {
   font-size: 23px;
   text-transform: uppercase;
@@ -135,6 +156,7 @@ body {
   letter-spacing: 6px;
   color: #000046;
 }
+
 .inside h1 {
   font-size: 120px;
   line-height: 120px;
@@ -146,4 +168,3 @@ body {
   top: 390px;
   color: #333;
 }
-

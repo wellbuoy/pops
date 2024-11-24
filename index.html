@@ -10,12 +10,20 @@
     />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    <script>
+      // JavaScript to toggle the flip effect on card click
+      document.addEventListener("DOMContentLoaded", function() {
+        const card = document.querySelector('.card');
+        card.addEventListener('click', function() {
+          card.classList.toggle('flipped');
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="card">
       <div class="outside">
         <div class="front">
-          <div class="birthdayCard" onclick="flipCard()"></div>
           <p>Happy Birthday <br>TO YOU <br> POPS</p>
           <div class="cake">
             <div class="top-layer"></div>
@@ -37,6 +45,5 @@
         <p class="name">- MAX -</p>
       </div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
