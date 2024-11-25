@@ -7,21 +7,24 @@
 
 body {
   background-color: #fdbf00;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
 .card {
   width: 750px;
   height: 550px;
-  position: absolute;
+  position: relative;
   margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   -webkit-perspective: 1200px;
   perspective: 1200px;
   transition: 1s;
   cursor: pointer;
+  transition: transform 0.5s;
 }
 
 .card.flipped .outside {
@@ -174,37 +177,83 @@ p {
   color: #333;
 }
 
-@media screen and (max-width: 600px) {
+/* Responsive design */
+@media (max-width: 767px) {
   .card {
+    width: 90%;
+    height: auto;
+    padding-bottom: 50%;
+  }
+
+  .inside {
+    width: 80%;
+    left: 10%;
+    padding: 20px;
+  }
+
+  .outside {
     width: 100%;
     height: auto;
-    max-width: 90%;
+  }
+
+  .cake {
+    width: 80%;
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .top-layer,
+  .middle-layer,
+  .bottom-layer {
+    width: 100%;
+  }
+
+  .name {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+    color: #333;
   }
 
   .outside p {
     font-size: 22px;
+    letter-spacing: 4px;
   }
 
-  .inside h1 {
-    font-size: 50px;
+  .insider h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    height: auto;
   }
 
-  .cake .top-layer,
-  .cake .middle-layer,
-  .cake .bottom-layer {
-    width: 180px;
-    height: 60px;
+  .inside {
+    width: 90%;
+    left: 5%;
+    padding: 15px;
   }
 
-  .cake .candle {
-    width: 12px;
-    height: 35px;
-  }
-
-  .name {
+  .outside p {
     font-size: 18px;
-    position: relative;
-    left: 0;
-    top: 50px;
+    letter-spacing: 2px;
+  }
+
+  .cake {
+    width: 70%;
+  }
+
+  .top-layer,
+  .middle-layer,
+  .bottom-layer {
+    width: 100%;
+  }
+
+  .insider h1 {
+    font-size: 32px;
   }
 }
