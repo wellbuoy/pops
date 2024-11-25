@@ -173,3 +173,38 @@ p {
   top: 390px;
   color: #333;
 }
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100%;
+    height: auto;
+    max-width: 90%;
+  }
+
+  .outside p {
+    font-size: 22px;
+  }
+
+  .inside h1 {
+    font-size: 50px;
+  }
+
+  .cake .top-layer,
+  .cake .middle-layer,
+  .cake .bottom-layer {
+    width: 180px;
+    height: 60px;
+  }
+
+  .cake .candle {
+    width: 12px;
+    height: 35px;
+  }
+
+  .name {
+    font-size: 18px;
+    position: relative;
+    left: 0;
+    top: 50px;
+  }
+}
