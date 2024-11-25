@@ -38,10 +38,10 @@ body {
 
 .outside,
 .inside {
-  height: 110%;
-  width: 70%;
+  height: 90%;
+  width: 60%;
   position: absolute;
-  left: 25.1%;
+  left: 24.1%;
 }
 
 .inside {
@@ -149,7 +149,7 @@ body {
 }
 
 .outside p {
-  font-size: 23px;
+  font-size: 28px;
   text-transform: uppercase;
   margin-top: 30px;
   text-align: center;
@@ -157,14 +157,19 @@ body {
   color: #000046;
 }
 
+p {
+  margin: 5px;
+  color: #333;
+}
+
 .inside h1 {
-  font-size: 120px;
-  line-height: 120px;
+  font-size: 60px;
+  line-height: 60px;
 }
 
 .name {
   position: absolute;
-  left: 440px;
+  left: 350px;
   top: 390px;
   color: #333;
 }
