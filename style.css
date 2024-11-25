@@ -41,19 +41,19 @@ body {
   height: 90%;
   width: 60%;
   position: absolute;
-  left: 24.1%;
+  left: 18.1%;
 }
 
 .inside {
   background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
   line-height: 2;
-  padding: 0 20px;
+  padding: 0 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  left: 25%;
+  left: 18%;
 }
 
 .outside {
@@ -158,7 +158,7 @@ body {
 }
 
 p {
-  margin: 5px;
+  margin: 1px;
   color: #333;
 }
 
